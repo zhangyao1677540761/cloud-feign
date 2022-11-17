@@ -8,8 +8,8 @@ eureka:
   client:
     register-with-eureka: false #false表示不向注册中心注册自己。
     fetch-registry: false #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
-#    service-url:  #格式不能改，最后一个必须是eureka
-#      defaultZone: http://eurekaServer-7001:7001/eureka/
+    service-url:  #eureka服务端可以不注册，但是会一直报错，推荐加上
+      defaultZone: http://localhost:7001/eureka
 
 
 #  server:  #关闭自保存模式
